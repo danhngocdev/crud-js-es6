@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <title>Document</title>
+    <style>
+      .checked{
+        color: red;
+      }
+      .hide{
+      display: none;
+    }
+    .show{
+      display: block;
+    }
+    </style>
 </head>
 <body>
     <div class="container mt-4">
@@ -18,39 +30,49 @@
             </div>
             <div class="form-group">
               <label for="author">Toán</label>
-              <input type="text" id="toan" class="form-control">
+              <input type="number" id="toan" class="form-control">
             </div>
             <div class="form-group">
                 <label for="author">Lý</label>
-                <input type="text" id="ly" class="form-control">
+                <input type="number" id="ly" class="form-control">
               </div>
 
               <div class="form-group">
                 <label for="author">Hóa</label>
-                <input type="text" id="hoa" class="form-control">
+                <input type="number" id="hoa" class="form-control">
               </div>
             <!-- <div class="form-group">
               <label for="isbn">ly#</label>
               <input type="text" id="isbn" class="form-control">
             </div> -->
-            <input type="submit" value="Add Student" class="btn btn-primary btn-block">
+            <input type="submit" value="Add Student" id="submit" class="btn btn-primary btn-block">
+
+ 
+          
+            <!-- //<button type="submit"  onclick="calculatorscore" class="btn btn-success btn-block">Tính điểm</button> -->
           </form>
           <table class="table table-striped mt-5">
             <thead>
               <tr>
-                <th>STT</th>
+                <th>ID</th>
                 <th>FUll Name</th>
                 <th>Toán</th>
                 <th>Lý</th>
                 <th>Hóa</th>
                 <th>Trung Bình</th>
+                <th></th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody id="student-list"></tbody>
           </table>
       </div>
-    
+   
+      <div class="container">
+        <button id="cal" class="btn btn-success">Tính điểm</button>
+        <button id="good" class="btn btn-primary">tìm học sinh giỏi</button>
+      </div>
+      
 </body>
 
 <script type="text/javascript" src="./js/index.js"></script>
